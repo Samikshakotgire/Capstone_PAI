@@ -1,7 +1,6 @@
 """
 Photoacoustic Computed Tomography (PACT) Reconstruction & Analysis Suite
 Implementation of UBP, DMAS, SLSC, and MV Algorithms with SBR Matrix Validation
-Author: [Your Name]
 """
 
 import numpy as np
