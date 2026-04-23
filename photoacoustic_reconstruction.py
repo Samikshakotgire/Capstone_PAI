@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import loadmat
 from scipy.signal import hilbert
+from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -441,10 +442,14 @@ def main():
     print("PHOTOACOUSTIC IMAGING RECONSTRUCTION")
     print("="*60)
     
+    # Build robust workspace-relative paths
+    base_dir = Path(__file__).resolve().parent
+    sensor_data_file = base_dir / 'Q1 _3_SensorData_5dots_diag_NoNoise (1).mat'
+    output_dir = base_dir / 'outputs'
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     # Initialize reconstruction
-    reconstructor = PhotoacousticReconstruction(
-        '/mnt/user-data/uploads/Q1__3_SensorData_5dots_diag_NoNoise__1_.mat'
-    )
+    reconstructor = PhotoacousticReconstruction(str(sensor_data_file))
     
     # Define target positions (5 sources placed diagonally)
     # Based on the image: sources are at diagonal positions
@@ -483,7 +488,7 @@ def main():
     reconstructor.plot_reconstruction(
         image_ubp, 
         'Universal Back Projection (UBP)', 
-        '/home/claude/ubp_reconstruction.png'
+        str(output_dir / 'ubp_reconstruction.png')
     )
     
     # 2. Delay Multiply and Sum (DMAS)
@@ -500,7 +505,7 @@ def main():
     reconstructor.plot_reconstruction(
         image_dmas, 
         'Delay Multiply and Sum (DMAS)', 
-        '/home/claude/dmas_reconstruction.png'
+        str(output_dir / 'dmas_reconstruction.png')
     )
     
     # 3. Short Lag Spatial Coherence (SLSC)
@@ -517,7 +522,7 @@ def main():
     reconstructor.plot_reconstruction(
         image_slsc, 
         'Short Lag Spatial Coherence (SLSC)', 
-        '/home/claude/slsc_reconstruction.png'
+        str(output_dir / 'slsc_reconstruction.png')
     )
     
     # 4. Minimum Variance (MV)
@@ -534,7 +539,7 @@ def main():
     reconstructor.plot_reconstruction(
         image_mv, 
         'Minimum Variance (MV)', 
-        '/home/claude/mv_reconstruction.png'
+        str(output_dir / 'mv_reconstruction.png')
     )
     
     # Create comparison plot
@@ -564,7 +569,7 @@ def main():
         plt.colorbar(im, ax=ax, label='Intensity (dB)')
     
     plt.tight_layout()
-    plt.savefig('/home/claude/all_reconstructions_comparison.png', dpi=300, bbox_inches='tight')
+    plt.savefig(str(output_dir / 'all_reconstructions_comparison.png'), dpi=300, bbox_inches='tight')
     plt.close()
     
     print("\n" + "="*60)
@@ -616,11 +621,11 @@ def main():
     print("RECONSTRUCTION COMPLETE!")
     print("="*60)
     print("\nGenerated files:")
-    print("  - ubp_reconstruction.png")
-    print("  - dmas_reconstruction.png")
-    print("  - slsc_reconstruction.png")
-    print("  - mv_reconstruction.png")
-    print("  - all_reconstructions_comparison.png")
+    print(f"  - {output_dir / 'ubp_reconstruction.png'}")
+    print(f"  - {output_dir / 'dmas_reconstruction.png'}")
+    print(f"  - {output_dir / 'slsc_reconstruction.png'}")
+    print(f"  - {output_dir / 'mv_reconstruction.png'}")
+    print(f"  - {output_dir / 'all_reconstructions_comparison.png'}")
     print("="*60)
 
 

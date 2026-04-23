@@ -1,0 +1,7 @@
+﻿D:\Capstone\Codes\Good_Codes\codes\for_noisy_data.py:16: SyntaxWarning: invalid escape sequence '\C'
+  data = sio.loadmat('D:\Capstone\matlab_project\capstone_sensor_data\z_202603_Capstone_LineSen128_ExtSr_SensorData_5dots_diag_-10dB_.mat')
+D:\Capstone\Codes\Good_Codes\codes\for_noisy_data.py:154: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+D:\Capstone\Codes\Good_Codes\codes\for_noisy_data.py:156: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+

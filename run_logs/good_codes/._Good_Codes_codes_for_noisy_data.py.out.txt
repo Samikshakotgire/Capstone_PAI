@@ -1,0 +1,14 @@
+﻿Computing delays...
+Running DMAS (~1-2 min)...
+DMAS done!
+Auto-detecting 5 brightest targets...
+Detected targets (mm): [(np.float64(-6.05000000000008), np.float64(7.5000000000000036)), (np.float64(-12.350000000000042), np.float64(4.8000000000000025)), (np.float64(-0.050000000000115924), np.float64(9.900000000000004)), (np.float64(6.649999999999843), np.float64(12.400000000000006)), (np.float64(12.449999999999806), np.float64(14.900000000000007))]
+Dot 1: (-6.1, 7.5 mm)  SBR = 34.7 dB
+Dot 2: (-12.4, 4.8 mm)  SBR = 31.1 dB
+Dot 3: (-0.1, 9.9 mm)  SBR = 33.9 dB
+Dot 4: (6.6, 12.4 mm)  SBR = 31.4 dB
+Dot 5: (12.4, 14.9 mm)  SBR = 32.4 dB
+
+SBRs: [34.7 31.1 33.9 31.4 32.4] dB
+Mean SBR: 32.7 dB
+

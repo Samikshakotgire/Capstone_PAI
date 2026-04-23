@@ -1,0 +1,10 @@
+﻿Reconstructing...
+
+--- Target Analysis Table ---
+  Target  X (mm)  Z (mm)  SBR (dB)
+0      A    12.5     5.0      5.00
+1      B    15.8     7.5      3.95
+2      C    19.2    10.0     11.94
+3      D    22.6    12.5      4.88
+4      E    25.9    15.0      1.37
+

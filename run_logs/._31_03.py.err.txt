@@ -1,0 +1,8 @@
+﻿Traceback (most recent call last):
+  File "D:\Capstone\Codes\31_03.py", line 103, in <module>
+    I = delay_and_sum_fast(mat_path)
+  File "D:\Capstone\Codes\31_03.py", line 63, in delay_and_sum_fast
+    S   = data['S']
+          ~~~~^^^^^
+KeyError: 'S'
+

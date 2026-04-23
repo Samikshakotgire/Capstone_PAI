@@ -1,0 +1,9 @@
+﻿Calculating Baseline UBP...
+Running Refined FBP (Xu & Wang logic)...
+Running Iterative Refinement (SIRT)...
+  Iteration 1/5 complete
+  Iteration 2/5 complete
+  Iteration 3/5 complete
+  Iteration 4/5 complete
+  Iteration 5/5 complete
+

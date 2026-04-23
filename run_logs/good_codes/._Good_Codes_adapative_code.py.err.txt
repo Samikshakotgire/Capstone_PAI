@@ -1,0 +1,3 @@
+﻿D:\Capstone\Codes\Good_Codes\adapative_code.py:109: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+

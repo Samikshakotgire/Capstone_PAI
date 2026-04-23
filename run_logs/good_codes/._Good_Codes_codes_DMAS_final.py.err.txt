@@ -1,0 +1,5 @@
+﻿D:\Capstone\Codes\Good_Codes\codes\DMAS_final.py:141: RuntimeWarning: divide by zero encountered in log10
+  sbr     = 20 * np.log10(signal / (noise + 1e-12))
+D:\Capstone\Codes\Good_Codes\codes\DMAS_final.py:173: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+

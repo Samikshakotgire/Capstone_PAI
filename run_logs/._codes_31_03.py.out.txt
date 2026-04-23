@@ -1,0 +1,3 @@
+﻿dict_keys(['__header__', '__version__', '__globals__', 'sensor_data'])
+sensor_data <class 'numpy.ndarray'> (128, 1024)
+

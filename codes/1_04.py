@@ -58,7 +58,7 @@ for i in range(num_sensors - 1):
 # Normalize + threshold + log
 img_norm = np.abs(img_DMAS) / np.max(img_DMAS)
 img_thresh = img_norm.copy()
-img_thresh[img_thresh < 0.5] = 0.0
+img_thresh[img_thresh < 0.166] = 0.0
 img_log = 20 * np.log10(img_thresh + 1e-6)
 img_log = np.clip(img_log, -60, 0)
 
@@ -91,7 +91,7 @@ def mm_to_xi(val, grid):
 # ==========================================
 # PLOT — Perfect ROI boxes on REAL targets
 # ==========================================
-fig, axes = plt.subplots(1, 5, figsize=(22, 7))
+fig, axes = plt.subplots(1, 5, figsize=(25, 12))
 all_sbrs = []
 
 for k, (ax, dot, bg) in enumerate(zip(axes, dots_auto, backgrounds_auto)):
